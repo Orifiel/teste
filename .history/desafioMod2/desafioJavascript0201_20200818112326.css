@@ -1,0 +1,9 @@
+ul .list-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    font-size: 25px;
+}

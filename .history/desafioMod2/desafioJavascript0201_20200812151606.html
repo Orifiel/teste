@@ -1,0 +1,51 @@
+<!--
+1º exercício
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="text" href="./desafioJavascript0201.js">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        .button-container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button-container .getsquadred {
+            font-size: 1.6rem;
+            padding: 0.8rem;
+            margin-bottom: 1.6rem;
+            border: 0;
+            background-color: rgb(155, 8, 8);
+            color: whitesmoke;
+        }
+
+        .container-squads {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+    </style>
+    <div class="button-container">
+     <button class="getsquadred" onclick="">Adicionar</button>
+    
+
+        <div class="container-squads">
+              
+        </div>
+    </div>
+</body>
+</html>

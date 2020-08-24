@@ -1,0 +1,1 @@
+const localCreating = document.querySelector('.container-squads-master')

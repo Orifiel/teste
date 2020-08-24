@@ -1,0 +1,74 @@
+<!--
+1º exercício
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="desafioJavascript0201.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        #container{
+            height: 87vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #button-red-box{
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #button-red-box #button-red {
+            font-size: 1.6rem;
+            padding: 0.8rem;
+            margin-bottom: 1.6rem;
+            border: 0;
+            outline: none;
+            border-radius: 10px;
+            background-color: rgb(155, 8, 8);
+            color: whitesmoke;
+            font-family: verdana;
+        }
+        #button-red-box #button-red:hover{
+            background-color: rgb(226, 53, 53)
+        }
+
+        .container-squads {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(255, 0, 0);
+            border: 5px solid #5a0511;
+            border-radius: 5px;
+            
+            margin: 5px auto;
+        }
+
+    </style>
+        
+        <div id='button-red-box' >
+            <button id="button-red" onclick="addSquad()">Adiciona</button>
+
+        </div>
+        
+        <div id="container" onmouseover='colorize()'>
+            <!-- Aloca as div's criadas pelo javascript-->
+        </div>
+
+
+</body>
+</html>

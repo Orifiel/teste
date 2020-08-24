@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background: yellowgreen;
+    }
+   .container {
+        display: flex;
+        
+        flex-direction: column;
+        width: 70vw;
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    label{
+        font-size: 2.5rem;
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    input {
+        
+        outline: none;
+        width: 12rem;
+        padding: 8px 14px;
+        border: none;
+        background: rgb(238, 238, 238);
+        color: rgb(0, 0, 0);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 1rem;
+        
+    }
+
+    button {
+        width: 12rem;
+        height: 30px;
+        background: rgb(36, 189, 250);
+        border: none;
+        font-family: 'Do Hyeon', sans-serif;
+        font-size: 20px;
+        color: rgb(9, 7, 136);
+        outline: none;
+        transition: 0.3s;
+        margin-top: 1.5rem;
+    }
+    button:hover{
+        background:rgb(9, 7, 136);
+        color:rgb(36, 189, 250);
+        width: 13rem;
+        }
+
+    #repo-container{
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    ul .repose{
+        font-size: 1.2rem;
+        font-family: 'Do Hyeon', sans-serif;
+        list-style: none;
+        padding: 5px auto;
+        text-decoration: none;
+       
+    }
+
+</style>
+<body>
+    <div class="container">
+        <label for="username">Github's Username</label>
+        <input type="text" name="username" id="username" placeholder="Insert User" required>
+        <button onclick='searchUserInGithub()'>Search</button>
+       
+
+    </div>
+    <div id="repo-container">
+        <ul id="respositorys">
+           
+            <!-- Inclusão de repositorios-->
+
+        </ul>
+    </div>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="./desafioJavascritpt0402.js"></script>   
+</body>
+</html>

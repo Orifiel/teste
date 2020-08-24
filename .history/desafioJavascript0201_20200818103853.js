@@ -1,0 +1,30 @@
+const nomes = ['Cleiton', 'Mariana', 'Nicolas', 'Matheus']
+
+const lista = document.querySelector('#listados')
+const campo = document.querySelector('.newName')
+const botao = document.querySelector('.add')
+
+
+function handleName() {
+    const text = campo.value
+    nomes.push(text)
+    renderList()
+}
+
+function renderList(nomes){
+    for (let i = 0; i <= nomes.length; i++){ 
+        var item = document.createElement('li')
+        item.textContent = nomes[i]
+
+        if( item.textContent > ''){
+            lista.appendChild(item)
+        
+        } else { console.log('Sem mais nomes para adicionar') }
+
+    }
+
+}
+
+botao.onclick = handleName
+
+renderList(nomes)

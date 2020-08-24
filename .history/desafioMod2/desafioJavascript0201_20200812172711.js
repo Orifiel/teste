@@ -1,0 +1,3 @@
+function criarQuad(){
+    alert("Funcionou")
+}
