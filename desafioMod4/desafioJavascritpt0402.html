@@ -76,6 +76,7 @@
         flex-direction: column;
         justify-items: center;
         align-items:center;
+        transition: 0.3;
     }
 
     #respositorys .repose{
@@ -101,7 +102,7 @@
     }
 
     h1 {
-        font-size:3rem;
+        font-size:2rem;
         text-align: center;
         color: whitesmoke;
     }
@@ -111,7 +112,7 @@
 <body>
     <div class="container">
         <label for="username">Github's Username</label>
-        <input type="text" name="username" id="username" placeholder="Insert User" required>
+        <input type="text" autocomplete="off" name="username" id="username" placeholder="Insert User" required>
         <button onclick='searchUserInGithub()'>Search</button>
        
 

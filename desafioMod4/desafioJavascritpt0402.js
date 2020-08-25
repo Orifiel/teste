@@ -28,25 +28,37 @@ function searchUserInGithub(){
     listRepo.innerHTML = '';
     
     axios.get(`https://api.github.com/users/${username}/repos`)
+    
     .then(function(response){
-        console.log(response)
+        console.log(response.data)
+
+            if (response.data.length == 0){
+               const noReposit = document.createElement('h1')
+                noReposit.textContent = 'Usuário não possui repositorios'
+                listRepo.appendChild(noReposit)
+            } else {
+
             for (repo of response.data) {
+                
             const listReposit = document.createElement('li')
             listReposit.classList.add('repose')
             
             const link = document.createElement('a')
             link.setAttribute('href', repo.html_url)
+            link.setAttribute('target','_blank')
             link.textContent = repo.name
-            
             
             listReposit.appendChild(link)
             listRepo.appendChild(listReposit)
          } 
-         
+        
+        }
     } 
     )
     .catch(function(error){
         console.log(error)
+        const listRepo = document.querySelector('#respositorys')
+        listRepo.innerHTML = '';
         const msg_error = document.createElement('h1')
         msg_error.textContent = 'Não foi possível localizar esse usuário'
 
