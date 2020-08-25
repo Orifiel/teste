@@ -21,9 +21,11 @@ Depois de preencher o input e adicionar, a seguinte lista deve aparecer abaixo:
 function searchUserInGithub(){  
     event.preventDefault()
 
+    
 
     const username = document.querySelector('#username').value
-   
+    
+
     const listRepo = document.querySelector('#respositorys')
     listRepo.innerHTML = '';
     
@@ -31,6 +33,7 @@ function searchUserInGithub(){
     
     .then(function(response){
         console.log(response.data)
+        limparCampo(username)
 
             if (response.data.length == 0){
                const noReposit = document.createElement('h1')
@@ -68,3 +71,6 @@ function searchUserInGithub(){
 }
 
 
+function limparCampo(){
+    document.querySelector('#username').value = '';
+}
