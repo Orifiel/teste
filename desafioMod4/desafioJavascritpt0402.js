@@ -28,6 +28,15 @@ function searchUserInGithub(){
     const listRepo = document.querySelector('#respositorys')
     //remove qualquer valor dentro da div repositorys
     listRepo.innerHTML = '';
+    //cria um li     
+    const listReposit = document.createElement('span')
+    //adiciona uma classe css a essa li criada
+    listReposit.classList.add('repose')
+    //Insere a mensagem de Loading na pagina antes da requisição ajax ocorrer
+    listReposit.textContent = 'Loading...'
+    //anexa o elemento 'li' como elemento filho do elemento div repopsitorys
+    listRepo.appendChild(listReposit)
+    
     
     //solicitação ajax com axios para a api do github
     axios.get(`https://api.github.com/users/${username}/repos`)
@@ -37,6 +46,8 @@ function searchUserInGithub(){
         console.log(response.data)
         //invoca a função limparCampo, para zerar o valor dentro do input
         limparCampo(username)
+        //remove qualquer valor dentro da div repositorys
+        listRepo.innerHTML = '';
             
         //valida se o tamanho de data da resposta obtida é igual a 0
         if (response.data.length == 0){
@@ -76,6 +87,8 @@ function searchUserInGithub(){
     .catch(function(error){
         //exibe a mensagem de erro no terminal
         console.log(error)
+        //remove qualquer valor dentro da div repositorys
+        listRepo.innerHTML = '';
         //cria um elemento h1
         const msg_error = document.createElement('h1')
         //anexa um texto a ser usado por esse h1
