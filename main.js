@@ -336,3 +336,24 @@ const usuario4 = {
 }
 
 console.log(usuario4)
+
+/** Template Literals */
+
+const nomeusuario = 'Diego';
+const idadeusuario = 23;
+console.log('O usuário ' + nomeusuario + ' possui ' + idadeusuario + ' anos');
+/** Exemplo agora usando o template literals */
+console.log(`O usuário ${nomeusuario} possui ${idadeusuario} anos`)
+
+
+// Sintaxe curta de objetos
+
+const novonome = 'Diego';
+const novaidade = 23;
+const novousuario = {
+ novonome,
+ novaidade,
+ cidade: 'Rio do Sul',
+};
+
+console.log(novousuario)
